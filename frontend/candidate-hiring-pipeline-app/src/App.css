@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-button {
+  background: #222;
+  color: white;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search-box button {
+  background: #333;
+  color: white;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.stage-column {
+  background: #e9ebef;
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 400px;
+}
+
+.stage-column h2,
+.rejected-section h2 {
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.rejected-section {
+  margin-top: 24px;
+  background: #e9ebef;
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 120px;
+}
+
+.candidate-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.candidate-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.candidate-card p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.candidate-card small {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+
+.candidate-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.candidate-form h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.candidate-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.candidate-form input {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.form-buttons button:first-child {
+  background: #222;
+  color: white;
+}
+
+.form-buttons button:last-child {
+  background: #ddd;
+  color: #222;
+}
+
+.candidate-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.candidate-actions button {
+  padding: 7px 10px;
+  font-size: 12px;
+  background: #333;
+  color: white;
+}
+
+.candidate-actions button:last-child {
+  background: #eee;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+.history-button {
+  margin-top: 10px;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.history-section {
+  margin-top: 24px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0 0 8px;
+}
+
+.history-header p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.history-list {
+  margin-top: 15px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.history-item span {
+  color: #777;
+  font-size: 13px;
+}
+
+.search-message {
+  background: #fff4d6;
+  border: 1px solid #ead9a8;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.search-results {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.search-results h2 {
+  margin-top: 0;
+}
+
+.search-results .candidate-card {
+  max-width: 500px;
+}
+
+.clear-search {
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #ccc;
+}
+.search-box button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
