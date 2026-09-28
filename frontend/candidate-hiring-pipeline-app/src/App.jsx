@@ -19,9 +19,10 @@ function App() {
 
   const historyRef = useRef(null);
 
+  const API_URL = import.meta.env.API_URL || "http://127.0.0.1:8000";
   const loadCandidates = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/candidates/");
+      const response = await fetch(`${API_URL}/candidates/`);
 
       const data = await response.json();
 
@@ -39,7 +40,7 @@ function App() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/candidates/", {
+      const response = await fetch(`${API_URL}/candidates/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +69,7 @@ function App() {
   const moveCandidate = async (candidateId) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/candidates/${candidateId}/advance`,
+        `${API_URL}/candidates/${candidateId}/advance`,
         {
           method: "POST",
         },
@@ -89,7 +90,7 @@ function App() {
   const rejectCandidate = async (candidateId) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/candidates/${candidateId}/reject`,
+        `${API_URL}/candidates/${candidateId}/reject`,
         {
           method: "POST",
         },
@@ -110,7 +111,7 @@ function App() {
   const viewHistory = async (candidate) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/candidates/${candidate.id}/history`,
+        `${API_URL}/candidates/${candidate.id}/history`,
       );
 
       if (!response.ok) {
@@ -144,7 +145,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/search/?query=${encodeURIComponent(searchQuery)}`,
+        `${API_URL}/search/?query=${encodeURIComponent(searchQuery)}`,
       );
 
       const data = await response.json();
